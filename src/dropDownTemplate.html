@@ -1,0 +1,17 @@
+<div id="meraDD" class="ddwn">
+            <div class="DDwrap">
+            <ul class="DDsearch">
+            <li class="frst" style="float: none;">
+            <div class="DDinputWrap">
+            <input type="text" ng-click="showDrop()" id="" class="srchTxt" placeholder="" autocomplete="off" style="color: rgb(68, 68, 68);" ng-model="selectedName">
+            </div>
+            </li>
+            </ul>
+            </div>
+            <div class="" id="dd_dwn" ng-show="show" style="overflow:hidden">
+            <listing tuplecount="10" selected-id ="selectedId" listing-callback="listingCallback(item)" data="data" multiselect="option.multiselect" selectedName="selectedName">
+            <div><span>{{$parent.item.name}}</span></div>
+            </listing>
+            </div>
+            <div><span ng-click="removeAllTags()">Clear</span><div tag-it tags="tags"></div></div>
+            </div>

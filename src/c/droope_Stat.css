@@ -1,0 +1,330 @@
+@charset "UTF-8";
+/** Variable, mixins and extends */
+.row { *zoom: 1; }
+.row:before, .row:after { display: table; content: ""; line-height: 0; }
+.row:after { clear: both; }
+
+/** Other common css */
+/** Author : Ankit Anand Version : base Description :  .errorCover class added Font family of body and main container layout moved to inline.css */
+.row { margin-bottom: 20px; }
+.row .left { width: 26%; text-align: right; float: left; padding-right: 15px; }
+.row .middle { width: 47%; text-align: left; float: left; }
+.row .middle.separatorPadding { padding-left: 40px; }
+.row .middle.align-center { text-align: center; }
+.row .middle .errorCover.space_top { margin-top: 20px; }
+.row .middle .line-separator { border-top: 1px solid #DFDFDF; margin: 35px 0px 15px; }
+.row .middle.focus + .right { display: block; }
+.row .right { width: 27%; padding-left: 3%; text-align: left; float: left; display: none; }
+.row .right.action { display: block; }
+
+.posR { position: relative; }
+
+/** Seperators */
+.block-separator { margin-top: -18px; margin-bottom: 0px; }
+
+.inline-separator { color: #707070; margin: 0px 20px; }
+
+.spacer-10 { margin-top: 10px; }
+
+/** Author : Ankit Anand Version : Base Description : Updated tagit version to v1 */
+textarea { resize: none; font-family: inherit; }
+
+label { padding: 10px 0; color: #707070; font-weight: 400; }
+
+.input, .select, .ddwn .DDwrap .DDsearch input { border: #DFDFDF solid 1px; padding: 10px; width: 100%; font-size: 100%; }
+
+.select { width: 120px; }
+
+.primary-btn { color: #FFFFFF; background-color: #27A7D4; border: none; display: inline-block; padding: 10px 25px; font-size: 16px; font-weight: 400; line-height: 1.42857143; text-align: center; vertical-align: middle; cursor: pointer; overflow: hidden; outline: none; padding: 16px 130px; }
+.primary-btn:hover { background-color: #0F89B2; }
+
+.upload-btn { color: #FFFFFF; background-color: #595959; border: none; display: inline-block; padding: 10px 25px; font-size: 16px; font-weight: 400; line-height: 1.42857143; text-align: center; vertical-align: middle; cursor: pointer; overflow: hidden; outline: none; width: 165px; font-size: 15px; text-overflow: ellipsis; }
+.upload-btn:hover { background-color: #393737; }
+
+.success { color: #449d44; }
+
+.submit-box { margin-top: 25px; text-align: center; }
+
+/** Shared plugins */
+/** Common validator */
+.erLbl { color: red; display: block; font-size: 12px; margin-top: 5px; display: none; }
+
+.err input { border-color: red; outline: none; }
+.err .erLbl { display: block; }
+.err .ddwn .DDwrap .DDsearch input { border-color: red; outline: none; }
+.err .suggest { border-color: red; }
+
+/** Checkboxes */
+.chkboxLbl { font-size: smaller; padding: 0px; }
+.chkboxLbl .primary-link { color: #27A7D4; display: inline-block; line-height: 1.42857143; display: inline; font-size: inherit; line-height: 0; }
+.chkboxLbl .primary-link:hover { color: #0F89B2; }
+
+.checkbox { float: left; margin-right: 10px; }
+
+.customChkBox, .listing li .tuple input[type="checkbox"] { opacity: 0; position: absolute; }
+
+.customChkBoxLbl, .listing li .tuple input[type="checkbox"] + .transcluded { position: relative; display: block; }
+
+.customChkBox + .customChkBoxLbl:before, .listing li .tuple input[type="checkbox"] + .customChkBoxLbl:before, .listing li .tuple input[type="checkbox"] + .transcluded:before { content: ''; background: url(../i/iconSprites.png) no-repeat; background-position: 0px 0px; display: inline-block; float: left; vertical-align: middle; width: 15px; height: 15px; margin-right: 10px; margin-bottom: 5px; text-align: center; }
+
+.customChkBox:checked + .customChkBoxLbl:before, .listing li .tuple input[type="checkbox"]:checked + .customChkBoxLbl:before, .listing li .tuple input[type="checkbox"]:checked + .transcluded:before { background-position: 0px -16px; }
+
+ul { margin: 0; list-style: none; padding: 0; }
+
+.listing li { cursor: pointer; }
+.listing li .tuple { padding: 5px 10px; }
+.listing li .tuple input[type="checkbox"] + .transcluded:before { content: ''; background: url(../i/iconSprites.png) no-repeat; background-position: 0px 0px; display: inline-block; float: left; vertical-align: middle; width: 15px; height: 15px; margin-right: 10px; margin-bottom: 5px; text-align: center; }
+.listing li .tuple input[type="checkbox"]:checked + .transcluded:before { background-position: 0px -16px; }
+.listing li .tuple:hover { color: #27A7D4; }
+.listing li .tuple.notSelectable { background-color: #D0E0F1; }
+.listing li .tuple.notSelectable:hover { color: #000000; }
+
+ul { margin: 0; list-style: none; padding: 0; }
+
+.ddwn .DDwrap .DDsearch .DDinputWrap { position: relative; }
+.ddwn .DDwrap .DDsearch .DDinputWrap .ddIcon { display: inline-block; right: 12px; top: 15px; position: absolute; background: url(../i/iconSprites.png) no-repeat; background-position: 0px -30px; width: 15px; height: 12px; }
+
+.ddwn { position: relative; display: inline-block; }
+.ddwn .dd_dwn { overflow-y: scroll; position: absolute; width: 100%; z-index: 1; background: white; border: 1px solid #DFDFDF; max-height: 150px; /*ul { li { div { cursor: pointer; padding: 5px 10px; &:hover { color: $curious-blue; } &.notSelectable { background-color: $link-water; &:hover { color: $black; } } } }
+}*/ }
+
+.toggleBox { display: inline-block; width: auto; vertical-align: top; }
+.toggleBox label { width: auto; font-weight: 400; }
+.toggleBox .customRadio { opacity: 0; position: absolute; cursor: pointer; }
+.toggleBox .customRadio + .customRadioLbl:before { content: attr(data-content); background: #FFFFFF; border: 1px solid #DFDFDF; display: inline-block; vertical-align: middle; padding: 9.5px; text-align: center; min-width: 15px; }
+.toggleBox .customRadio:checked + .customRadioLbl:before { background: #27A7D4; color: #FFFFFF; border-color: #27A7D4; }
+.toggleBox .customRadioLbl { cursor: pointer; position: relative; float: left; padding: 0px; }
+
+.suggest, .sWrap, .singleDD, .dWrap { position: relative; }
+
+ul, ul li { margin: 0; padding: 0; }
+
+/*it also used in single select dropdown*/
+.suggest { background-color: #fff; border: 1px solid #DFDFDF; display: block; }
+
+.suggest .inpWrap { padding-left: 12px; }
+
+.suggest .sugInp { padding: 10px 0 10px 0; border: none !important; margin: 0; outline: none; box-sizing: content-box; -moz-box-sizing: border-box; font-size: 100%; /* Firefox 28 and earlier*/ width: 100%; }
+
+.suggest .sOpen { border-bottom: 0; }
+
+.suggest .Sdrop { position: relative; text-align: left; width: 100%; }
+
+.suggest .Sdrop li { overflow: hidden; padding: 0; margin: 0; position: relative; }
+
+.suggest .Sdrop .sAct { color: #0099cc; background-color: #f1f1f1; }
+
+.suggest .Sdrop .sAct strong { color: #0099cc; }
+
+.suggest .Sdrop .category { padding: 10px 10px 5px; color: #A8A8A8; }
+
+.suggest .Sbtn { font-size: 13px; height: 25px; display: block; word-wrap: break-word; text-indent: 15px; padding-right: 15px; -moz-box-sizing: border-box; box-sizing: border-box; text-decoration: none; line-height: 25px; color: #000; background: none; text-align: left; border: 0; width: 100%; cursor: pointer; }
+
+.suggest .sugCont { display: block; width: 100%; max-height: 0; overflow-y: hidden; visibility: hidden; -moz-transition: max-height 1s ease; transition: max-height 1s ease; position: absolute; background-color: #fff; box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); z-index: 15; border: 1px solid #c5c5c5 \9; }
+
+.suggest .iconWrap { position: absolute; right: 0; }
+
+.suggest .nLoder { background: url(../../../100/src/i/anim_loading_16x16.gif); width: 16px; height: 16px; float: right; margin: 12px 3px 0 0px; display: none; }
+
+.suggest .Sarw { background-position: 9px -118px; height: 25px; width: 25px; position: absolute; right: 0; top: 0; }
+
+.suggest .Sarw.sAct { background-position: -8px -118px; }
+
+.suggest .wrapTable { padding-right: 25px; }
+
+.suggest .slideDown { max-height: 150px; visibility: visible; }
+
+/** Author : Ankit Anand Version  : v1 Description : Splittled styles of li.tagit with li */
+.err .tagContainer { border-color: red; }
+
+.tagContainer { border: #DFDFDF solid 1px; margin-bottom: 10px; background: white; position: relative; }
+
+ul.tags:after { content: " "; visibility: hidden; display: block; height: 0; clear: both; }
+ul.tags > li { float: left; margin: 5px 0px 5px 5px; }
+ul.tags > li.tagit { cursor: pointer; padding: 10px; border: #27A7D4 solid 1px; color: #27A7D4; }
+ul.tags > li.tagit.selected { background: #27A7D4; color: white; }
+ul.tags .dCross { padding: 10px 0 10px 10px; color: white; }
+ul.tags .dCross:after { content: '\274C'; font-size: 0.60em; }
+
+[data-tagit-remove="false"] li.tagit .dCross { display: none; }
+
+/** Upload directive */
+.upload-btn-text { display: block; margin-left: 1px; margin-top: 8px; }
+
+.uploadBtnCont { position: relative; }
+
+.uploadCV { opacity: 0; position: absolute; left: 0px; top: 0px; width: 165px; height: 42px; overflow: hidden; }
+.uploadCV input[type="file"] { width: 165px; height: 42px; }
+
+.uploadBtnBox { margin-top: 33px; position: relative; }
+.uploadBtnBox .info { padding-left: 10px; }
+
+/** Shared directives */
+resman-keyskill .suggest { position: static; border: none; }
+resman-keyskill .suggest .slideDown { left: 0px; }
+
+a { text-decoration: none; }
+
+.primary-link { color: #27A7D4; display: inline-block; line-height: 1.42857143; }
+.primary-link:hover { color: #0F89B2; }
+
+.primary-link { color: #27A7D4; display: inline-block; line-height: 1.42857143; }
+.primary-link:hover { color: #0F89B2; }
+.primary-link.disable { cursor: default; color: #A7A7A7; }
+.primary-link.disable:hover { color: #A7A7A7; }
+
+.progressbar { position: relative; display: inline-block; padding: 0; font-size: 14px; }
+.progressbar li { width: 120px; text-align: center; line-height: 25px; display: inline-block; position: relative; }
+.progressbar li em { width: 14px; height: 14px; border-radius: 7px; background: #707070; display: inline-block; }
+.progressbar li div { color: #707070; }
+.progressbar li::before { content: ''; position: absolute; top: 10px; left: -58px; width: 112px; height: 1px; background: #707070; z-index: -1; }
+.progressbar li:first-child::before { display: none; }
+.progressbar .active em { background: #707070; }
+.progressbar .active ~ li em { background: #D2D0D1; }
+.progressbar .active ~ li::before { background: #D2D0D1; }
+.progressbar .active ~ li div { color: #D2D0D1; }
+
+.nLoader45, .nLoader20 { width: 100%; background-color: rgba(255, 255, 255, 0.8); background-position: center center; background-repeat: no-repeat; position: absolute; top: 0; right: 0; bottom: 0; left: 0; display: none; z-index: 9998; }
+
+.nLoader45 { background-image: url(../i/nL45.gif); display: block; }
+
+.nLoader20 { background-image: url(../i/nL20.gif); display: block; }
+
+/*.ltCont .lightbox_open { visibility:visible }*/
+.ltCont { overflow: hidden; }
+
+.ltCont, .ltLayer { -moz-box-sizing: border-box; box-sizing: border-box; /*z-index:1;*/ }
+
+.ltCont, .ltCont .ltLayer { position: absolute; top: 0; right: 0; left: 0; bottom: 0; }
+
+.ltCont.close { display: none; }
+
+.ltCont .ltLayer { background: #000; -moz-transition: opacity 0.3s; transition: opacity 0.3s; }
+
+.ltCont .ltLayer.open { opacity: 0.5; filter: alpha(opacity=50); }
+
+.ltCont .ltLayer.close { opacity: 0; filter: alpha(opacity=0); }
+
+.lightbox { visibility: hidden; z-index: -1; }
+
+.ltCont .model_open { visibility: visible; }
+
+.flipOpen, .flipClose { -webkit-transform-origin: 50% 0 0; -moz-transform-origin: 50% 0 0; -ms-transform-origin: 50% 0 0; transform-origin: 50% 0 0; -moz-transition: -moz-transform 0.3s, opacity 0.3s; transition: -webkit-transform 0.3s, opacity 0.3s; transition: transform 0.3s, opacity 0.3s; }
+
+.flipOpen { -webkit-transform: perspective(1300px) rotateX(0deg); -moz-transform: perspective(1300px) rotateX(0deg); transform: perspective(1300px) rotateX(0deg); opacity: 1; }
+
+.flipClose { -webkit-transform: perspective(1300px) rotateX(-60deg); -moz-transform: perspective(1300px) rotateX(-60deg); transform: perspective(1300px) rotateX(-60deg); opacity: 0; }
+
+/*Customize Lightbox Styling*/
+.ltLayer { background: #000; }
+
+.ltBx { background: #f4f4f4; }
+.ltBx.standalone { background: #fff; }
+.ltBx .ltGlobalHd { background: #515050; padding: 15px 0px; width: 100%; overflow: hidden; position: relative; }
+.ltBx .ltGlobalHd .ltGlobalTtl { color: #fff; font-size: 16px; text-align: center; padding: 0 50px 0 10px; }
+.ltBx .ltGlobalHd .ltGlobalCls { width: 25px; height: 25px; color: #fff; position: absolute; top: 50%; margin-top: -13px; right: 10px; background: url(../i/iconSprites.png) no-repeat; background-position: -1px -41px; }
+.ltBx .ltCntnt { font-size: 14px; color: #666; width: 60%; margin: 0px auto; padding: 40px 0px; }
+.ltBx .primary-btn { color: #FFFFFF; background-color: #27A7D4; border: none; display: inline-block; padding: 10px 25px; font-size: 16px; font-weight: 400; line-height: 1.42857143; text-align: center; vertical-align: middle; cursor: pointer; overflow: hidden; outline: none; padding: 15px 90px; }
+.ltBx .primary-btn:hover { background-color: #0F89B2; }
+
+.alert { width: 990px; margin: 0 auto 20px; text-align: left; background-color: #F1F1F1; }
+.alert i { display: inline-block; font-style: normal; color: #FFFFFF; font-size: 26px; min-width: 60px; min-height: 50px; text-align: center; padding-top: 4px; }
+.alert span { padding-left: 10px; padding-right: 15px; font-size: 18px; }
+.alert.success i { background-color: #0cc663; }
+.alert.success i:before { content: "✔"; }
+.alert.success span { color: #0cc663; }
+.alert.warning i { background-color: #FFA500; }
+.alert.warning i:before { content: "⚠"; }
+.alert.warning span { color: #FFA500; }
+.alert.error i { background-color: red; }
+.alert.error i:before { content: "!"; }
+.alert.error span { color: red; }
+
+/** Page specific css which are not seperately loaded */
+/** Author: Ankit Anand Version : Base Branch : performance Desc : Basic detail component css */
+.mailerBox { padding: 10px; }
+.mailerBox .item { display: inline-block; width: 50%; }
+.mailerBox .item label { color: #000000; }
+
+.hidePwd { top: 0; color: #707070; padding: 10px 5px; right: 1px; position: absolute; }
+
+.resmanEmail .suggest { height: 41px; }
+.resmanEmail .suggest .sugCont { top: 40px; }
+.resmanEmail .suggest input { top: 0; left: 0; position: absolute; border: none; outline: none; }
+.resmanEmail [name="secondary_email"] { color: gray; }
+.resmanEmail [name="email"] { background: transparent; }
+
+/** Author: Ankit Anand Version : Base Branch : performance Desc : Employment detail component css */
+resman-salary .ddwn, resman-calendar .ddwn { width: 100px; }
+resman-salary .ddwn + .select-label, resman-calendar .ddwn + .select-label { margin: 0px 15px 0px 5px; }
+
+.currencyTxt { display: inline-block; width: 35px; }
+
+.warning { color: #FFA500; }
+
+.rainbowCont { text-align: center; }
+.rainbowCont .rainbow { list-style: none; display: inline-block; padding: 0px; }
+.rainbowCont .rainbow li { height: 180px; width: 70px; float: left; }
+.rainbowCont .rainbow li.yellow { background: #ff0; }
+.rainbowCont .rainbow li.cyan { background: #0ff; }
+.rainbowCont .rainbow li.green { background: #0F0; }
+.rainbowCont .rainbow li.pink { background: #F0F; }
+.rainbowCont .rainbow li.red { background: red; }
+.rainbowCont .rainbow li.blue { background: #00f; }
+.rainbowCont .rainbow li.black { background: #000; }
+.rainbowCont .content { position: relative; top: -150px; }
+.rainbowCont .content .largeWhite { font-size: 70px; font-weight: 400; color: #FFFFFF; margin-bottom: 70px; }
+.rainbowCont .content .mediumDark { font-size: 24px; font-weight: 400; color: #707070; }
+.rainbowCont .content .smallLight { font-size: 18px; color: #A7A7A7; }
+
+/** Should be lazily loaded */
+/** Author: Ankit Anand Version : Base Branch : performance Desc : Profile Completion component css */
+.imgCropper { padding: 20px; background-color: #fff; color: #7e7e7e; font-size: 14px; position: relative; }
+.imgCropper .previewArea { float: left; width: 170px; position: relative; }
+.imgCropper .previewArea .previewPic { width: 150px; height: 170px; border: 1px solid #DFDFDF; margin-bottom: 10px; }
+.imgCropper .previewArea .infoText { font-weight: 400; }
+.imgCropper .previewArea .helpText { color: #A7A7A7; font-size: 12px; margin-top: 15px; margin-bottom: 10px; }
+.imgCropper .previewArea .uploadAnotherPic { opacity: 0; position: absolute; left: 20px; width: 138px; height: 20px; overflow: hidden; }
+.imgCropper .cropArea { display: inline-block; height: 288px; width: 400px; border-left: 1px solid #DFDFDF; margin-left: 10px; }
+.imgCropper .cropArea img-crop { width: 100%; height: 100%; display: block; position: relative; overflow: hidden; }
+.imgCropper .cropArea img-crop canvas { display: block; position: absolute; top: 50%; left: 50%; outline: none; -webkit-tap-highlight-color: rgba(255, 255, 255, 0); /* mobile webkit */ }
+.imgCropper .cancel { margin-left: 10px; }
+.imgCropper .submit-box { margin-top: 40px; margin-left: 60px; }
+
+.itskill .help { color: #A7A7A7; margin-top: 11px; }
+.itskill .skillHead { margin-top: 10px; }
+.itskill .skillHead label { padding: 0; }
+.itskill .skillBox { margin: 10px 0px; }
+.itskill .col40 { display: inline-block; width: 40%; }
+.itskill .col20 { display: inline-block; width: 20%; }
+
+.errorCover.city { display: inline-block; width: 65%; }
+.errorCover.pincode { display: inline-block; width: 30%; float: right; }
+
+.textBox { display: inline-block; width: 350px; vertical-align: top; padding: 5px 0px 0px 15px; }
+
+.imageBox { display: inline-block; width: 110px; height: 115px; border: 1px solid #DFDFDF; background: #FFFFFF; }
+.imageBox .profile { width: 107px; height: 113px; }
+
+.profileToggle.toggleBox .customRadioLbl { width: 155px; }
+.profileToggle.toggleBox .customRadioLbl:before { min-width: 135px; padding: 9.5px 9px; }
+
+.dispNone { display: none; }
+
+.marginR5 { margin-right: 5px; }
+
+resman-dob .ddwn { width: 124px; }
+
+.dateBox { display: inline-block; width: auto; }
+.dateBox .duration.ddwn { width: 100px; }
+.dateBox .duration:first-child { margin-right: 6px; }
+
+.dateSeparator { color: #707070; margin: 0px 20px; }
+
+/** Messages */
+.info { color: #A7A7A7; font-size: 13px; margin-top: 5px; }
+
+.select-label { color: #707070; }
+
+.experience.ddwn { width: 120px; }
+.experience.ddwn + .select-label { margin: 0px 50px 0px 12px; }

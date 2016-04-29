@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html ng-app="droopeDemo">
+
+<head>
+    <script type="text/javascript">
+    DEBUG = true;
+    </script>
+    <link href="c/droope_Stat.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body ng-controller="demoController">
+    <droope tuplecount="10" option="options" data="data" api="myApi" droope-callback="onClickFunc(item)"></droope>
+</body>
+
+</html>
+<script src="libs/angular.min.js"></script>
+<script type="text/javascript" src="../../listing-angular/listing/j/data.js"></script>
+<script src="j/demo.js"></script>
+<script src="j/droope.js"></script>
+
+
+<!-- </head>
+
+<body>
+
+    
+	<div id="content">
+	<droope tuplecount="10" selected-id ="selectedId" listing-callback="onClickFunc(item)" data="data" multiselect=true></droope>
+	</div>
+
+</body> -->
+</html>
